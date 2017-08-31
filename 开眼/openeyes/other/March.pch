@@ -1,0 +1,38 @@
+//
+//  March.pch
+//  openeyes
+//
+//  Created by YSmac1 on 16/10/13.
+//  Copyright © 2016年 YiSenZhongHe. All rights reserved.
+//
+
+#ifndef March_pch
+#define March_pch
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define clearWarning_force(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wnonnull\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+#import "API.h"
+
+//#define TODO _Pragma("message\"报告大王\"")
+
+//自定义警告宏
+#define STRINGIFY(S) #S
+#define DEFER_STRINGIFY(S) STRINGIFY(S)
+#define PRAGMA_MESSAGE(MSG) _Pragma(STRINGIFY(message(MSG)))
+#define FORMATTED_MESSAGE(MSG) "[TODO-" DEFER_STRINGIFY(__COUNTER__) "] " MSG " \n" \
+DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
+#define KEYWORDIFY try {} @catch (...) {}
+// 最终使用下面的宏
+#define TODO(MSG) KEYWORDIFY PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
+
+
+#endif /* March_pch */
