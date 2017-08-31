@@ -1524,7 +1524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UFCUZ4TD33;
-				GCC_PREFIX_HEADER = /Users/YSmac1/Desktop/openeyes/openeyes/other/March.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/openeyes/other/March.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INFOPLIST_FILE = openeyes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1540,7 +1540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UFCUZ4TD33;
-				GCC_PREFIX_HEADER = /Users/YSmac1/Desktop/openeyes/openeyes/other/March.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/openeyes/other/March.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INFOPLIST_FILE = openeyes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
